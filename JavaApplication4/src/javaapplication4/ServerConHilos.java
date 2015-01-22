@@ -7,6 +7,7 @@ package javaapplication4;
 
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 
 /**
  *
@@ -15,9 +16,10 @@ import java.net.ServerSocket;
 public class ServerConHilos {
     public static void main(String[] args) throws IOException {
         //creamos serversockect
-        ServerSocket socket = new ServerSocket(3000);
+        ServerSocket server = new ServerSocket(3000);
         while(true){
-            
+            Socket socket = new Socket();
+            socket = server.accept();
         }
     }
 }
